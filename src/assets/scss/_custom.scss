@@ -3,4 +3,18 @@
   .top-bar, .top-bar ul{
     background-color: transparent;
   }
+  .title-bar{
+    background-color: transparent;
+  }
+}
+.top-bar-left{
+  img{
+    max-width: 120px;
+  }
+}
+.align-justify{
+  background-color: $test;
+  div{
+    border: $borderTest;
+  }
 }
