@@ -1,3 +1,6 @@
-h1{
-  font-size: 120px !important;
+.navBackground{
+  background-color: $test;
+  .top-bar, .top-bar ul{
+    background-color: transparent;
+  }
 }
