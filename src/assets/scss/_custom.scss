@@ -18,3 +18,14 @@
     border: $borderTest;
   }
 }
+
+#newsWrap{
+  background-color: $test;
+  #newsFeed ul{
+    @include grid-row(3);
+    li{
+      background-color: $test;
+      @include grid-column(1);
+    }
+  }
+}

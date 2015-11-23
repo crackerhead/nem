@@ -32,6 +32,7 @@ var PATHS = {
     'bower_components/foundation-sites/js/foundation.core.js',
     'bower_components/foundation-sites/js/foundation.util.*.js',
     'bower_components/foundation-sites/js/foundation.*.js',
+    'bower_components/twitter-fetcher/js/twitterFetcher.js',
     'src/assets/js/**/*.js',
     'src/assets/js/app.js'
   ]
