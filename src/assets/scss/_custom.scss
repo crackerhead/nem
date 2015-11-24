@@ -26,6 +26,89 @@
     li{
       background-color: $test;
       @include grid-column(1);
+      .tweet{
+       font-weight: 300;
+       margin-top: 25%;
+       margin-bottom: 20%;
+       overflow: hidden !important;
+      }
+      a span{
+         font-weight: 300;
+         color: $green !important;
+      }
     }
   }
+}
+.user a span:first-of-type {
+   display:none;
+   margin-right:25px;
+   color: $dark-gray !important;
+   font-weight: 500 !important;
+}
+.user a span:last-of-type {
+   display: block;
+   margin-top:7px;
+   font-size: 200%;
+   color: $dark-gray !important;
+   font-weight: 500 !important;
+}
+.tweet{
+   margin-top: 85px;
+}
+.timePosted{
+   margin-left: 15px;
+   color: $dark-gray !important;
+   font-weight: 300;
+}
+.media img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 200px !important;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 30px;
+}
+.user a > span {
+   float:left;
+   font-weight: 300;
+}
+.tweet{
+   color: $light-gray !important;
+}
+.tweet a > span:before {
+   background-color: transparent !important;
+   height: 0px;
+   margin-bottom: 0px;
+}
+.tweet a > span:after {
+   background-color: blue !important;
+   height: 0px;
+   margin-bottom: 0px;
+}
+.tweet a:hover{
+   color: $greenLite !important;
+   @include mui-animation(fade);
+}
+
+
+#buyWrap{
+  // @include grid-row(3);
+  div{
+    margin-right: $pad;
+    background-color: $test;
+    border: $borderTest;
+    // @include grid-column(1);
+  }
+  div:last-child{
+    margin-right: 0px;
+  }
+}
+.tester{
+  background-color: $test;
+  border: $borderTest;
+}
+#buyBar{
+
 }
