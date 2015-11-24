@@ -112,3 +112,10 @@
 #buyBar{
   text-align: center;
 }
+.helpWrap{
+  text-align: center;
+  div{
+    background-color: $test;
+    border: $borderTest;
+  }
+}

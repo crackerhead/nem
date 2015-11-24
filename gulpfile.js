@@ -24,7 +24,8 @@ var PATHS = {
   ],
   sass: [
     'bower_components/foundation-sites/scss',
-    'bower_components/motion-ui/src/'
+    'bower_components/motion-ui/src/',
+    'bower_components/font-awesome/scss'
   ],
   javascript: [
     'bower_components/jquery/dist/jquery.js',
@@ -43,6 +44,10 @@ var PATHS = {
 gulp.task('clean', function(done) {
   rimraf('dist', done);
 });
+// Copy fontawesome font icons to dist folder
+gulp.src('bower_components/font-awesome/fonts/**.*')
+  .pipe(gulp.dest('dist/assets/fonts/'));
+
 
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
@@ -76,6 +81,7 @@ gulp.task('styleguide', function(cb) {
     template: 'src/styleguide/template.html'
   }, cb);
 });
+
 
 // Compile Sass into CSS
 // In production, the CSS is compressed
