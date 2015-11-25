@@ -112,10 +112,10 @@
 #buyBar{
   text-align: center;
 }
-.helpWrap{
+.helpWrap div:first-child{
   text-align: center;
-  div{
+}
+.helpWrap div{
     background-color: $test;
     border: $borderTest;
-  }
 }

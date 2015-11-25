@@ -44,10 +44,6 @@ var PATHS = {
 gulp.task('clean', function(done) {
   rimraf('dist', done);
 });
-// Copy fontawesome font icons to dist folder
-gulp.src('bower_components/font-awesome/fonts/**.*')
-  .pipe(gulp.dest('dist/assets/fonts/'));
-
 
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
@@ -55,6 +51,10 @@ gulp.task('copy', function() {
   gulp.src(PATHS.assets)
     .pipe(gulp.dest('dist/assets'));
 });
+
+// Copy fontawesome font icons to dist folder
+gulp.src('bower_components/font-awesome/fonts/**.*')
+  .pipe(gulp.dest('dist/assets/fonts/'));
 
 // Copy page templates into finished HTML files
 gulp.task('pages', function() {
@@ -81,7 +81,6 @@ gulp.task('styleguide', function(cb) {
     template: 'src/styleguide/template.html'
   }, cb);
 });
-
 
 // Compile Sass into CSS
 // In production, the CSS is compressed
