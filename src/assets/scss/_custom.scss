@@ -18,6 +18,27 @@
     border: $borderTest;
   }
 }
+
+.client .columns{
+  background: $test;
+  border: $borderTest;
+  img{
+    width:670px !important;
+    min-width:670px !important;
+    overflow: visible;
+  }
+}
+.clientBottom{
+  text-align: right;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  .columns{
+  background: $test;
+  border: $borderTest;
+  }
+}
+
+
 @mixin center-children {
   display: flex;
   justify-content: center;
@@ -44,6 +65,7 @@
 //    flex-direction: row;
 //    justify-content: flex-end;
 // }
+
 
 
 #newsWrap{
