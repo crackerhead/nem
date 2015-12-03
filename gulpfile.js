@@ -6,7 +6,8 @@ var panini   = require('panini');
 var rimraf   = require('rimraf');
 var sequence = require('run-sequence');
 var sherpa   = require('style-sherpa');
-var i18n = require('gulp-i18n-gspreadsheet');
+var i18n     = require('gulp-i18n-gspreadsheet');
+var config   = require('./config.json');
 
 // Check for --production flag
 var isProduction = !!(argv.production);
@@ -40,17 +41,6 @@ var PATHS = {
   ]
 };
 
-// google spreadsheet i18n support
-gulp.src('src/*')
-    .pipe(i18n({
-        private_key_id: '',
-        private_key: '',
-        client_email: 'account-1@i18n-1147.iam.gserviceaccount.com',
-        client_id: '111697229074384724430',
-        type: 'service_account',
-        document_key: '1dCO6KpecxgB577Fd0Gk0W-h9NuwTwPyDB7lysiNSZ34'
-  }));
-
 // Delete the "dist" folder
 // This happens every time a build starts
 gulp.task('clean', function(done) {
@@ -63,10 +53,6 @@ gulp.task('copy', function() {
   gulp.src(PATHS.assets)
     .pipe(gulp.dest('dist/assets'));
 });
-
-// Copy fontawesome font icons to dist folder
-gulp.src('bower_components/font-awesome/fonts/**.*')
-  .pipe(gulp.dest('dist/assets/fonts/'));
 
 // Copy page templates into finished HTML files
 gulp.task('pages', function() {
@@ -138,6 +124,12 @@ gulp.task('javascript', function() {
     .pipe(gulp.dest('dist/assets/js'));
 });
 
+// Copy fontawesome font icons to dist folder
+gulp.task('fonts', function() {
+  gulp.src('bower_components/font-awesome/fonts/**.*')
+    .pipe(gulp.dest('dist/assets/fonts/'));
+});
+
 // Copy images to the "dist" folder
 // In production, the images are compressed
 gulp.task('images', function() {
@@ -152,8 +144,20 @@ gulp.task('images', function() {
 
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(done) {
-  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'copy'], 'styleguide', done);
+  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'copy', 'fonts'], 'styleguide', done);
 });
+
+// google spreadsheet i18n support
+gulp.src('src/*')
+    .pipe(i18n({
+        private_key_id: (config.privateKeyId),
+        private_key: (config.privateKey),
+        client_email: 'account-1@i18n-1147.iam.gserviceaccount.com',
+        client_id: '111697229074384724430',
+        type: 'service_account',
+        document_key: '1dCO6KpecxgB577Fd0Gk0W-h9NuwTwPyDB7lysiNSZ34'
+    }))
+    .pipe(gulp.dest('dist/assets/'));
 
 // Start a server with LiveReload to preview the site in
 gulp.task('server', ['build'], function() {
