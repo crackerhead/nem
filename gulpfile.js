@@ -6,6 +6,7 @@ var panini   = require('panini');
 var rimraf   = require('rimraf');
 var sequence = require('run-sequence');
 var sherpa   = require('style-sherpa');
+var i18n = require('gulp-i18n-gspreadsheet');
 
 // Check for --production flag
 var isProduction = !!(argv.production);
@@ -38,6 +39,17 @@ var PATHS = {
     'src/assets/js/app.js'
   ]
 };
+
+// google spreadsheet i18n support
+gulp.src('src/*')
+    .pipe(i18n({
+        private_key_id: '',
+        private_key: '',
+        client_email: 'account-1@i18n-1147.iam.gserviceaccount.com',
+        client_id: '111697229074384724430',
+        type: 'service_account',
+        document_key: '1dCO6KpecxgB577Fd0Gk0W-h9NuwTwPyDB7lysiNSZ34'
+  }));
 
 // Delete the "dist" folder
 // This happens every time a build starts
