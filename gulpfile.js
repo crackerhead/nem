@@ -155,7 +155,9 @@ gulp.src('src/*')
         client_email: 'account-1@i18n-1147.iam.gserviceaccount.com',
         client_id: '111697229074384724430',
         type: 'service_account',
-        document_key: '1dCO6KpecxgB577Fd0Gk0W-h9NuwTwPyDB7lysiNSZ34'
+        document_key: '1dCO6KpecxgB577Fd0Gk0W-h9NuwTwPyDB7lysiNSZ34',
+        default_locale: 'en',
+        write_default_translations: 'true'
     }))
     .pipe(gulp.dest('dist/assets/'));
 
