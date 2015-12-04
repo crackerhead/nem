@@ -149,7 +149,8 @@ gulp.task('build', function(done) {
   sequence('clean', ['pages', 'sass', 'javascript', 'images', 'copy', 'fonts'], 'styleguide', done);
 });
 
-// google spreadsheet i18n support
+// google spreadsheet i18n.
+// Pulls columns from gspreadsheet and puts each column in seperate json file.
 gulp.src('src/*')
     .pipe(i18n({
         private_key_id: (config.privateKeyId),
