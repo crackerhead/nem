@@ -17,3 +17,20 @@ var config1 = {
   "showInteraction": false
 };
 twitterFetcher.fetch(config1);
+
+$.i18n.init({
+		ns: { namespaces: ['translation'], defaultNs: 'translation'},
+		useLocalStorage: false,
+		fallbackLng: 'en',
+		// sendMissing: true,
+		debug: false
+	}, function(t) {
+		$('#add').text($.t('ns.common:add'));
+		$('#appname').text($.t('app.name'));
+		$('#appclient').text($.t('app.client'));
+		<!-- OURNEM HOMEPAGE -->
+		$('#navclient').text($.t('second'));
+		$('#navbuy').text($.t('nav.buy'));
+		$('#blog').text($.t('nav.blog'));
+		$('#support').i18n();
+});

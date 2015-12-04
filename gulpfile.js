@@ -36,6 +36,7 @@ var PATHS = {
     'bower_components/foundation-sites/js/foundation.util.*.js',
     'bower_components/foundation-sites/js/foundation.*.js',
     'bower_components/twitter-fetcher/js/twitterFetcher.js',
+    'bower_components/i18next/i18next.js',
     'src/assets/js/**/*.js',
     'src/assets/js/app.js'
   ]
@@ -157,7 +158,9 @@ gulp.src('src/*')
         type: 'service_account',
         document_key: '1dCO6KpecxgB577Fd0Gk0W-h9NuwTwPyDB7lysiNSZ34',
         default_locale: 'en',
-        write_default_translations: 'true'
+        write_default_translations: 'true',
+        ext: '.json',
+        output_dir: 'locales/'
     }))
     .pipe(gulp.dest('dist/assets/'));
 
