@@ -1,4 +1,5 @@
 {
- "first": "holaFirst",
- "second": "holaSecond"
+ "!test": "es",
+ "fir": "holaFirst",
+ "sec": "holaSecond"
 }

@@ -19,17 +19,17 @@ var config1 = {
 twitterFetcher.fetch(config1);
 
 $.i18n.init({
-		ns: { namespaces: ['translation'], defaultNs: 'translation'},
+		ns: { namespaces: ['en', 'es'], defaultNs: 'en'},
 		useLocalStorage: false,
 		fallbackLng: 'en',
-		// sendMissing: true,
-		debug: false
+    resGetPath: 'assets/locales/__lng__.json',
+		debug: true
 	}, function(t) {
 		$('#add').text($.t('ns.common:add'));
 		$('#appname').text($.t('app.name'));
 		$('#appclient').text($.t('app.client'));
 		<!-- OURNEM HOMEPAGE -->
-		$('#navclient').text($.t('second'));
+		$('#navclient').text($.t('!test'));
 		$('#navbuy').text($.t('nav.buy'));
 		$('#blog').text($.t('nav.blog'));
 		$('#support').i18n();

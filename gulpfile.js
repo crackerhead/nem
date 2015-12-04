@@ -7,6 +7,7 @@ var rimraf   = require('rimraf');
 var sequence = require('run-sequence');
 var sherpa   = require('style-sherpa');
 var i18n     = require('gulp-i18n-gspreadsheet');
+var i18next  = require('i18next');
 var config   = require('./config.json');
 
 // Check for --production flag
@@ -159,10 +160,12 @@ gulp.src('src/*')
         document_key: '1dCO6KpecxgB577Fd0Gk0W-h9NuwTwPyDB7lysiNSZ34',
         default_locale: 'en',
         write_default_translations: 'true',
+        key_column: 'key',
         ext: '.json',
         output_dir: 'locales/'
     }))
     .pipe(gulp.dest('dist/assets/'));
+
 
 // Start a server with LiveReload to preview the site in
 gulp.task('server', ['build'], function() {

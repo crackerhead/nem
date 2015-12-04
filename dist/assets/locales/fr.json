@@ -1,5 +1,6 @@
 {
- "<a href=\"#\">text</a>": "<a href=\"#\">text1</a>",
- "first": "bonjourFirst",
- "second": "bonjourSecond"
+ "!test": "fr",
+ "fir": "bonjourFirst",
+ "sec": "bonjourSecond",
+ "test": "<a href=\"#\">text1</a>"
 }
