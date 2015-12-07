@@ -1,5 +1,6 @@
 {
  "!test": "es",
  "fir": "holaFirst",
- "sec": "holaSecond"
+ "sec": "holaSecond",
+ "yes": "si"
 }

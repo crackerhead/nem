@@ -1,6 +1,8 @@
 {
  "!test": "fr",
  "fir": "bonjourFirst",
- "sec": "bonjourSecond",
- "test": "<a href=\"#\">text1</a>"
+ "sec": "bonjourSecond Hola \nNEW Line\n<hr/>\ndouble New line\n<br>\n## Newline",
+ "test": "<br>",
+ "tester": "frenchTest",
+ "yes": "sure"
 }

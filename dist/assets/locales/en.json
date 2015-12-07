@@ -2,5 +2,7 @@
  "!test": "en",
  "fir": "first",
  "sec": "second",
- "test": "<a href=\"#\">text</a>"
+ "test": "<a href=\"#\">text</a>",
+ "tester": "tester",
+ "yes": "yes"
 }

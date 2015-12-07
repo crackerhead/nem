@@ -18,19 +18,26 @@ var config1 = {
 };
 twitterFetcher.fetch(config1);
 
+// given registered post processor
+// i18n.addPostProcessor("markdown", function(val, key, opts) {
+//    return require("markdown").markdown.toHTML(val);
+// });
+
+
 $.i18n.init({
 		ns: { namespaces: ['en', 'es'], defaultNs: 'en'},
 		useLocalStorage: false,
 		fallbackLng: 'en',
     resGetPath: 'assets/locales/__lng__.json',
+    // postProcess: 'markdown',
 		debug: true
 	}, function(t) {
 		$('#add').text($.t('ns.common:add'));
 		$('#appname').text($.t('app.name'));
 		$('#appclient').text($.t('app.client'));
 		<!-- OURNEM HOMEPAGE -->
-		$('#navclient').text($.t('!test'));
+		$('#navclient').text($.t('sec'));
 		$('#navbuy').text($.t('nav.buy'));
 		$('#blog').text($.t('nav.blog'));
-		$('#support').i18n();
+		$('#test123').i18n();
 });

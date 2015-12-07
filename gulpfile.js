@@ -28,7 +28,8 @@ var PATHS = {
   sass: [
     'bower_components/foundation-sites/scss',
     'bower_components/motion-ui/src/',
-    'bower_components/font-awesome/scss'
+    'bower_components/font-awesome/scss',
+    'bower_components/themify-icons/themify-icons.css'
   ],
   javascript: [
     'bower_components/jquery/dist/jquery.js',

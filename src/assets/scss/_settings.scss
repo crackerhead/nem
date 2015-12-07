@@ -54,6 +54,11 @@ $warning-color: #ffae00;
 $alert-color: #ec5840;
 $black: #0a0a0a;
 $white: #fefefe;
+$gray: #a4a4a4;
+$light-gray: #e6e6e6;
+$medium-gray: #555;
+$dark-gray: #444;
+$darkest-gray: #2f2f2f;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: Roboto, Arial, sans-serif;
@@ -68,13 +73,6 @@ $global-radius: 0;
 $global-namespace: false;
 $global-text-direction: ltr;
 $rem-base: 16px;
-// $gray: #555;
-// $darkGray: #444;
-// $darkerGray: #2f2f2f;
-// $darkestGray: #222;
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
 
 $green: #41bf76;
 $greenLite: rgba(65,191,118,0.6);
@@ -83,12 +81,9 @@ $offWhite: #fff;
 $whiteBackground: #f6f6f6;
 $black: #000;
 
-$gray: #555;
-$fontGray: #a4a4a4;
-$grayTransparent: rgba(255,255,255,0.95);
+
 
 $pad: 20px;
-
 // 1.5 Global test styles
 //
 $test: rgba(0,0,0,0.1) !important;
