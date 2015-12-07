@@ -119,14 +119,20 @@ footer .row .row{
 .helpWrap{
   margin-top: 80px;
   margin-bottom: 80px;
+  font-weight: 300;
+  .fa-square{
+    color: $light-gray;
+  }
 }
 
 .helpWrap div:first-child{
   text-align: center;
+  font-size: 32px;
+
 }
-.helpWrap div{
-    background-color: $test;
-    border: $borderTest;
+.helpText{
+  color: $primary-color;
+  font-weight: 400;
 }
 
 
