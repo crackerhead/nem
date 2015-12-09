@@ -7,9 +7,16 @@ footer .row .row{
   margin-left: 0px;
   margin-right: 0px;
 }
+#buyWrap .small-12.med-large-expand, .small-4, .medium-5, .medium-5 ul{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0;
+  // margin-right: 0;
+}
 // FOUNDATION OVERRIDES --END
 
 *{
+  margin: 0;
   list-style-type: none;
   font-weight: 300;
 }
@@ -17,7 +24,11 @@ p{
   font-size: 17px;
 }
 
-
+@mixin centerChildren {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -89,12 +100,6 @@ p{
   }
 }
 
-
-@mixin center-children {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .bubbleWrap{
   .column{
     background-color: $test;
@@ -105,7 +110,7 @@ p{
     max-width: 150px;
     max-height: 150px;
     // margin: 20px;
-    @include center-children;
+    @include centerChildren;
     text-align:center;
     div{
     }
@@ -117,15 +122,40 @@ p{
 //    justify-content: flex-end;
 // }
 #buyWrap{
-  // @include grid-row(3);
+  text-align: center;
+  img{
+    min-width: 64px;
+    height: 64px;
+  }
+  .arrows{
+    padding-top: (64px - 50px) / 2;
+    img{
+      min-width: 50px;
+      height: 50px;
+    }
+  }
   div{
     margin-right: $pad;
     background-color: $test;
-    border: $borderTest;
-    // @include grid-column(1);
+      border: $borderTest;
   }
   div:last-child{
     margin-right: 0px;
+  }
+  .row.icons{
+    margin: 0 auto;
+    margin-top: $pad;
+    .columns{
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
+#buyWrap .align-center{
+  margin: 0;
+  margin-top: $pad * 3;
+  .column ul{
+    // @include centerChildren;
   }
 }
 .tester{
