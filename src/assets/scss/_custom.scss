@@ -11,14 +11,10 @@ footer .row .row{
 
 *{
   list-style-type: none;
+  font-weight: 300;
 }
-
-.menu{
-  // text-align: left;
-
-  li{
-      // text-align-last: right;
-  }
+p{
+  font-size: 17px;
 }
 
 
@@ -67,18 +63,12 @@ footer .row .row{
   .large-7{
     p{
       max-width: 510px;
-      font-size: 17px;
       font-weight: 300;
     }
     p:last-child{
       max-width: 520px;
       font-size: 14px;
       font-weight: 300;
-    }
-  }
-  .large-5{
-    p{
-      // padding-left: 35px;
     }
   }
 }
@@ -88,6 +78,11 @@ footer .row .row{
   text-align: right;
   margin-top: 50px;
   margin-bottom: 50px;
+  p{
+    max-width: 400px;
+      // text-align: right;
+      margin: 0 0 0 auto;
+  }
   .columns{
   background: $test;
   border: $borderTest;
