@@ -71,9 +71,9 @@ p{
   h3{
     font-weight: 700;
   }
-  .large-7{
+  .large-6{
     p{
-      max-width: 510px;
+      max-width: 520px;
       font-weight: 300;
     }
     p:last-child{
@@ -87,18 +87,24 @@ p{
 
 .clientBottom{
   text-align: right;
-  margin-top: 50px;
-  margin-bottom: 50px;
   p{
     max-width: 400px;
-      // text-align: right;
-      margin: 0 0 0 auto;
+    margin: 0 0 0 auto;
   }
   .columns{
-  background: $test;
-  border: $borderTest;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: $test;
+    border: $borderTest;
   }
 }
+.client .row.align-middle{
+  margin: 0 auto;
+}
+
+
+
+
 
 .bubbleWrap{
   .column{
@@ -116,11 +122,9 @@ p{
     }
   }
 }
-// .testy{
-//    display: flex;
-//    flex-direction: row;
-//    justify-content: flex-end;
-// }
+
+
+
 #buyWrap{
   text-align: center;
   img{
@@ -136,8 +140,8 @@ p{
   }
   div{
     margin-right: $pad;
-    background-color: $test;
-      border: $borderTest;
+    // background-color: $test;
+    //   border: $borderTest;
   }
   div:last-child{
     margin-right: 0px;
@@ -154,20 +158,28 @@ p{
 #buyWrap .align-center{
   margin: 0;
   margin-top: $pad * 3;
-  .column ul{
-    // @include centerChildren;
+  min-height: 48px;
+  span{
+    font-weight: 500;
+    font-size: 14px;
   }
 }
-.tester{
-  background-color: $test;
-  border: $borderTest;
+#buyBox1, #buyBox2, #buyBox3{
+  padding-bottom: $pad;
+  background: $gray;
+  span button{
+    padding-top: $pad * 1.5;
+  }
+}
+#buyBox3 .medium-8{
+  padding-top: 12px;
 }
 #buyBar{
   text-align: center;
+    img{
+    height: 20px;
+  }
 }
-
-
-
 
 
 .helpWrap{
@@ -347,7 +359,7 @@ footer{
 
 
 /* BUTTON STYLING START */
-.btn {
+a .btn {
    border: none;
    font-family: inherit;
    font-size: inherit;
@@ -374,7 +386,7 @@ footer{
    -moz-transition: all 0.3s;
    transition: all 0.3s;
 }
-.btn:after {
+a .btn:after {
    content: '';
    position: absolute;
    z-index: -1;
@@ -382,7 +394,7 @@ footer{
    -moz-transition: all 0.3s;
    transition: all 0.3s;
 }
-.btn-1e:after {
+a .btn-1e:after {
    width: 100%;
    height: 0;
    top: 50%;
@@ -395,14 +407,14 @@ footer{
    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
    transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
-.btn-1e:hover,
-.btn-1e:active {
+a .btn-1e:hover,
+a .btn-1e:active {
    color: $white;
    opacity: 1;
    z-index: 60;
 }
 /* background size */
-.btn-1e:hover:after {
+a .btn-1e:hover:after {
    height: 620%;
    opacity: 1;
 }
